@@ -25,10 +25,11 @@ class list		//declaring list class
 		}
 		void create();
 		void display();
-		void concat();
-		void merge();
-		void intersect();
-		void union();
+		void concat(list);
+		void merge(list);
+		void intersect(list);
+		void union(list);
+		void sort();
 		
 };
 
@@ -67,7 +68,30 @@ void list::display()
 	cout<<"NULL";
 }
 
+void list::concat(list l2)
+{
+	node *temp=listptr;
+	while(temp->next!=NULL)
+		temp=temp->next;
+	
+	temp->next=l2.listptr;
+}
 
+void list::merge(list l2)
+{
+	node *temp=listptr;
+	while(temp->next!=NULL)
+		temp=temp->next;
+	
+	temp->next=l2.listptr;
+	
+	l1.sort();
+}
+
+void list::sort();
+{
+	
+}
 
 
 
